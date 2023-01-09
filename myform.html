@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <meta name="description" content="A simple form"/>
+    <title>我的第一个表单</title>
+    <script src="assets/js/page-js.js"></script>
+</head>
+<body>
+<div class="content-box">
+    <h1>填写个人信息</h1>
+    <div class="out-box">
+        <form action="handle.php" method="post" name="test-form"
+              target="_blank" id="test-form"
+              autocomplete="off" novalidate>
+            <fieldset id="base" class="field-area">
+                <legend>必要信息</legend>
+                <label for="p_name">姓名</label>
+                <input type="text" name="name" id="p_name" placeholder="Your name here" maxlength="13"/><br/>
+                <label for="p_password">密码</label>
+                <input type="password" name="password" id="p_password" maxlength="6"/><br/>
+                <div id="gender-select-area">
+                    <label for="gender-select-area">性别</label>
+                    <input type="radio" name="gender" id="gender-m" value="1"/><label for="gender-m">男</label>
+                    <input type="radio" name="gender" id="gender-f" value="0"/><label for="gender-f">女</label>
+                </div>
+            </fieldset>
+            <fieldset id="extended" class="field-area">
+                <legend>其他信息</legend>
+                <label for="character">选择你最喜爱的 Arcaea 角色</label>
+                <select id="character" name="character">
+                    <optgroup label="Main story & Free">
+                        <option value="Tairitsu">Tairitsu</option>
+                        <option value="Hikari">Hikari</option>
+                    </optgroup>
+                    <optgroup label="Side story">
+                        <option value="Kou">Kou</option>
+                        <option value="Lethe">Lethe</option>
+                        <option value="Eto">Eto</option>
+                        <option value="Saya">Saya</option>
+                        <option value="Kanae">Kanae</option>
+                    </optgroup>
+                </select><br/>
+                <label for="intro">来做些自我介绍吧！</label><br/>
+                <textarea rows="3" cols="80" name="per_info" id="intro"
+                          placeholder="Place your introduction here"></textarea>
+            </fieldset>
+            <div id="buttons">
+                <input type="reset" class="v_button" value="重新填写表格"/>
+                <input type="submit" class="v_button" value="提交信息"/>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
